@@ -21,7 +21,8 @@ function getForecastDetails (loc, callback) {
 
 exports.currentLocation = function (req, res, next) {
 	let ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-	let geo = geoip.lookup('220.222.38.89');
+	//let geo = geoip.lookup('220.222.38.89');
+	let geo = geoip.lookup(ip);
 	getForecastDetails(geo.city, (err, result) => {
 		if (err) {
 			next(err);
