@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 
 
-app.post('/getCurrentLocation', [forecast.currentLocation])
+app.get('/getCurrentLocation', [forecast.currentLocation])
 
 //Minute difference in response time and more readability
 app.post('/getClimateAsync', [forecast.asyncFunction]);
