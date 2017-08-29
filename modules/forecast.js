@@ -57,7 +57,7 @@ exports.asyncFunction = function (req, res, next) {
 		if (err) {
 			next(err);
 		} else {
-			console.log(results);
+			//console.log(results);
 			res.send(results);
 		}
 	}));
