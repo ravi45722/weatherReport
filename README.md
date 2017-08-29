@@ -17,3 +17,14 @@ Method : POST
 URI    : http://<nodeip>:<port>/getClimateAsync 
 Body   : ["San Antonio","Sanfransisco"]
 ```
+or if you want to reduce third party modules 
+```
+Method : POST 
+URI    : http://<nodeip>:<port>/getClimateNative
+Body   : ["San Antonio","Sanfransisco"]
+```
+To get the current location forecast (Based on IP and might not work for private Network).   If we can use HTML5 geolocation for this it will be more robust and accurate
+```
+Method : GET
+URI    : http://<nodeip>:<port>/getCurrentLocation
+```
